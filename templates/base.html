@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <title>Wikii | {% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href="/">Wikii</a>
+    <ul class="nav navbar-nav">
+        <!-- logged in -->
+        {% if logged_in %}
+        <li class="nav-item">
+            <a class="nav-link" href="/_edit/{{ link }}" >Edit</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/_history/{{ link }}">History</a>
+        </li>
+        {% endif %}
+        <!-- end -->
+    </ul>
+    <!-- Logged in -->
+    {% if logged_in %}
+    <ul class="nav navbar-nav pull-xs-right login-menu">
+            <li class="nav-item greetings">Hello, {{ username }}!</li>
+            <li class="nav-item"><a href="/logout" class="nav-link">Sign Out</a></li>
+    </ul>
+    {% else %}
+    <!-- Logged out -->
+    <ul class="nav navbar-nav pull-xs-right login-menu">
+        <li class="nav-item"><a href="/login" class="nav-link">Sign in</a></li>
+        <li class="nav-item"><a href="/signup" class="nav-link">Register</a></li>
+    </ul>
+    {% endif %}
+</nav>
+<!--end-->
+
+{% block content %}{% endblock content %}
+
+<!--footer-->
+<footer class="footer">
+	<div class="container">
+		<span class="text-muted">2016 Not Copyrighted! XO</span>
+	</div>
+</footer>
+<!--end-->
+
+<!-- JS -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

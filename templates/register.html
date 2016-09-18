@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Registration
+{% endblock title %}
+
+{% block content %}
+
+    <form id="register-form" method="post">
+        <h2 class="form-signin-heading">Sign up</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="" value="{{ username_input }}">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <label for="confirmPassword" class="sr-only">Confirm password</label>
+        <input type="password" name="password-verify" id="confirmPassword" class="form-control" placeholder="Confirm password" required="">
+
+        {% if errors %}
+        <div class="alert alert-danger" role="alert">
+            {% for error in errors %}
+                <p><strong>Oh snap!</strong> {{ error }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    </form>
+
+{% endblock content %}

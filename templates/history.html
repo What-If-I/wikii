@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    History
+{% endblock title %}
+
+{% block content %}
+
+    {% for submission in submissions %}
+        <div id="history">
+            <div class="container entity">
+                <div class="col-md-10 offset-md-1">
+                    <div class="col-md-12 head">
+                        <span class="time">{{ submission.last_modified.strftime("%d-%m-%Y %X")}}</span>
+                        <span class="user">{{ submission.author }}</span>
+                    </div>
+                    <div class="col-md-9 body">
+                        <h1>{{ submission.title }}</h1>
+                        <p>{{ submission.content }}</p>
+                    </div>
+                    <div class="col-md-3 links">
+                        <span><a href="/{{ link }}?v={{ loop.revindex0 }}">View</a></span>
+                        <span><a href="/_edit/{{ link }}?v={{ loop.revindex0 }}">Edit</a></span>
+                        <span><a href="/_delete/{{ link }}?v={{ loop.revindex0 }}">Delete</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,102 @@
+body {
+    padding-top: 5rem;
+    padding-bottom: 3em;
+}
+
+.login-menu li:last-child {
+	border-left: #b3b3b3 solid 1px;
+	padding-left: 1em;
+}
+
+li.greetings {
+    display: block;
+    padding-top: .425rem;
+    padding-bottom: .425rem;
+}
+
+#content h1 {
+	text-align: center;
+}
+
+#content p {
+	font-size: 1.25rem;
+    font-weight: 300;
+}
+
+#edit-content input[type=text]{
+	text-align: center;
+}
+
+#edit-content textarea {
+	font-size: 1rem;
+    font-weight: 300;
+}
+
+#edit-content button {
+	float: right;
+}
+
+#form-signIn {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+#form-signIn input {
+	margin-bottom: 10px;
+}
+
+#register-form {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+#register-form input {
+	margin-bottom: 10px;
+}
+
+#history .user {
+	float:right;
+}
+
+#history .head {
+	border-bottom: 1px solid #b3b3b3;
+	margin-bottom: 5px;
+}
+
+#history .entity {
+	margin-bottom: 25px;
+}
+
+#history .links > span {
+	border-left: 1px solid #d2d2d2;
+	padding-left: 0.3em;
+}
+
+#history .links > span:first-child {
+    border: none;
+}
+
+/*.footer {*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*!* Set the fixed height of the footer here *!*/
+    /*!*height: 60px;*!*/
+    /*padding: 60px;*/
+    /*line-height: 60px; !* Vertically center the text there *!*/
+    /*background-color: #f5f5f5;*/
+/*}*/
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
