@@ -8,4 +8,7 @@ class HistoryPage(Handler):
         link = self.url_lst_part()
         submissions = Submissions.all_submissions(link)
 
-        self.render('history.html', submissions=submissions)
+        if submissions:
+            self.render('history.html', submissions=submissions)
+        else:
+            self.redirect('/_edit/' + link)

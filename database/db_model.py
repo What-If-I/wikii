@@ -23,7 +23,6 @@ class User(ndb.Model):
 
 # Parent for Submissions, used for data consistency
 class SubmissionPages(ndb.Model):
-    # link = ndb.TextProperty(required=True)
     created_date = ndb.DateTimeProperty(auto_now_add=True)
     created_by = ndb.IntegerProperty(required=True)
 
